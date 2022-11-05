@@ -166,3 +166,122 @@ p {
 .invoice__container {
   padding-bottom: 200px !important;
 }
+
+
+/* =========== invoice details style start========= */
+.back__btn {
+  margin-bottom: 1.9rem;
+}
+
+.back__btn h6 {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.invoice__details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 0.5rem;
+  margin-bottom: 1.9rem;
+  background: var(--secondary-color);
+}
+
+.details__status {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.details__btns {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.edit__btn {
+  background: var(--edit-btn-bg);
+  color: #fff;
+}
+
+.mark__as-btn {
+  width: 130px !important;
+  padding: 10px 5px !important;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.delete__btn {
+  background: var(--delete-btn-bg);
+  color: #fff;
+}
+
+.invoice__details {
+  background: var(--secondary-color);
+  padding: 30px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.details__box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.9rem;
+}
+
+.invoice__created-date {
+  margin-bottom: 1.9rem;
+}
+
+.invoice__created-date p,
+.invoice__payment {
+  margin-bottom: 5px;
+}
+
+.invoice__client-address p {
+  margin-bottom: 5px;
+}
+
+.invoice__client-address h4 {
+  margin-bottom: 10px;
+}
+
+
+.invoice__item-box {
+  background: #252945;
+  padding: 30px;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.list {
+  list-style: none;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.list__item-box {
+  width: 25% !important;
+  text-align: right !important;
+}
+
+
+.item__name-box {
+  width: 50% !important;
+}
+
+.grand__total {
+  background: #0c0e16;
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border-radius: 0px 0px 7px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} 
+
