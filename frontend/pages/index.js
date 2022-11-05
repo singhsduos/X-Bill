@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 export default function Home() {
   const router = useRouter();
-  const navigatePage = () => router.push("/add-new");
+  const navigatePage = () => router.push("/addnew");
 
   return (
     <>
