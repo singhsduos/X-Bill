@@ -91,7 +91,6 @@ p {
   color: var(--pending-status-color);
 }
 
-
 /* ========== sidebar css ========== */
 .sidebar {
   width: 120px;
@@ -132,7 +131,6 @@ p {
   border-radius: 50%;
 }
 
-
 /* =========== home page style start =========== */
 .invoice__header {
   display: flex;
@@ -166,7 +164,6 @@ p {
 .invoice__container {
   padding-bottom: 200px !important;
 }
-
 
 /* =========== invoice details style start========= */
 .back__btn {
@@ -246,7 +243,6 @@ p {
   margin-bottom: 10px;
 }
 
-
 .invoice__item-box {
   background: #252945;
   padding: 30px;
@@ -269,7 +265,6 @@ p {
   text-align: right !important;
 }
 
-
 .item__name-box {
   width: 50% !important;
 }
@@ -283,5 +278,92 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-} 
+}
+
+/* =========== add new page style start ======== */
+
+.new__invoice {
+  width: 60%;
+  margin: auto;
+}
+
+.new__invoice-header {
+  margin-bottom: 1.9rem;
+}
+
+.form__group {
+  margin-bottom: 1.9rem;
+}
+
+.form__group input {
+  padding: 12px 20px;
+  width: 100%;
+  border-radius: 5px;
+  background: var(--secondary-color);
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.form__group p {
+  margin-bottom: 10px;
+}
+
+.inline__form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.inline__group {
+  width: 48%;
+}
+
+.new__invoice-body {
+  padding-bottom: 40px;
+}
+
+.bill__title {
+  margin-bottom: 20px;
+}
+
+.bill__to {
+  margin-top: 50px;
+}
+
+.invoice__items {
+  margin-top: 70px;
+}
+
+.invoice__items h3 {
+  margin-bottom: 30px;
+}
+
+.add__item-btn {
+  width: 100%;
+  background: var(--secondary-color);
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: none;
+
+  outline: none;
+  color: #fff;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.draft__btn {
+  background: #1f2c3f;
+  color: #fff;
+  margin-right: 30px;
+  width: 150px !important;
+}
+
+.new__invoice__btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
 
