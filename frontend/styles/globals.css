@@ -26,6 +26,74 @@
 
 body {
   background: var(--body-bg);
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+}
+
+p {
+  font-size: 0.8rem;
+  color: var(--small-text-color);
+}
+
+.btn {
+  padding: 7px 25px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ========== sidebar css ========== */
+.sidebar {
+  width: 120px;
+  height: 100%;
+  background: var(--secondary-color) !important;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.sidebar__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar__header,
+.sidebar__bottom {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 20px 20px 0px;
+  background: var(--primary-color);
+}
+
+.sidebar__bottom {
+  background: var(--secondary-color) !important;
+  border-top: 1px solid var(--primary-color);
+}
+
+.sidebar__bottom img {
+  border-radius: 50%;
 }
 
 
