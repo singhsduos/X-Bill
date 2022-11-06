@@ -29,6 +29,7 @@ export default function Home(props) {
               <div>
                 <h5 className="invoice__id">
                   #{invoice.id.substr(0, 6).toUpperCase()}
+                  {invoice.id.substr(22, 24).toUpperCase()}
                 </h5>
               </div>
 
@@ -72,8 +73,10 @@ export async function getStaticProps() {
 
   const db = client.db();
   const collection = db.collection("allInvoices");
-
-  const invoices = await collection.find({}).toArray();
+  const sort = {
+    total: -1,
+  };
+  const invoices = await collection.find({}).sort(sort).toArray();
 
   return {
     props: {
