@@ -146,7 +146,10 @@ const InvoiceDetails = (props) => {
         <div className="invoice__details" ref={container}>
           <div className="details__box">
             <div>
-              <h4>Invoice No: #{data.id.substr(0, 6).toUpperCase()}</h4>
+              <h4>
+                Invoice No: #{data.id.substr(0, 6).toUpperCase()}
+                {data.id.substr(22, 24).toUpperCase()}
+              </h4>
               <p>For: {data.description}</p>
             </div>
             <div className="sender_details">
