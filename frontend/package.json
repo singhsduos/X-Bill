@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@progress/kendo-drawing": "^1.17.2",
+    "@progress/kendo-licensing": "^1.2.2",
+    "@progress/kendo-react-pdf": "^5.9.0",
     "mongodb": "^4.8.1",
     "next": "12.2.3",
     "react": "18.2.0",
