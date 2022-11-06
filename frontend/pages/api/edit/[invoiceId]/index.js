@@ -2,8 +2,9 @@ import { MongoClient, ObjectId } from "mongodb";
 
 async function handler(req, res) {
   const { invoiceId } = req.query;
-  const client = await MongoClient.connect(process.env.DB_URI,{ useNewUrlParser: true }
-  );
+  const client = await MongoClient.connect(process.env.DB_URI, {
+    useNewUrlParser: true,
+  });
   const db = client.db();
   const collection = db.collection("allInvoices");
 
