@@ -2,12 +2,9 @@ import { MongoClient } from "mongodb";
 
 export default async function handler(req, res) {
   const { method } = req;  
-  const client = await MongoClient.connect(
-    "mongodb+srv://singhsduos:Ns9628491678@cluster0.9oan4b0.mongodb.net/xbill?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-    }
-  );
+  const client = await MongoClient.connect(process.env.DB_URI, {
+    useNewUrlParser: true,
+  });
 
   if (method === "POST") {
     try {
