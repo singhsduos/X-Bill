@@ -13,7 +13,7 @@ export default function Home(props) {
       <div className="invoice__header">
         <div className="invoice__header-logo">
           <h3>Invoices</h3>
-          <p>There are total {data?.size} invoices</p>
+          <p>There are total {data.length} invoices</p>
         </div>
 
         <button className="btn" onClick={navigatePage}>
@@ -28,7 +28,7 @@ export default function Home(props) {
             <div className="invoice__item">
               <div>
                 <h5 className="invoice__id">
-                  {invoice.id.substr(0, 6).toUpperCase()}
+                  #{invoice.id.substr(0, 6).toUpperCase()}
                 </h5>
               </div>
 
@@ -46,7 +46,7 @@ export default function Home(props) {
 
               <div>
                 <button
-                  className={`${
+                  className={`indexBtns ${
                     invoice.status === "paid"
                       ? "paid__status"
                       : invoice.status === "pending"
@@ -66,8 +66,9 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  const client = await MongoClient.connect(process.env.DB_URI,{ useNewUrlParser: true }
-  );
+  const client = await MongoClient.connect(process.env.DB_URI, {
+    useNewUrlParser: true,
+  });
 
   const db = client.db();
   const collection = db.collection("allInvoices");
