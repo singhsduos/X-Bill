@@ -70,6 +70,7 @@ p {
 .edit__btn,
 .delete__btn,
 .mark__as-btn,
+.download__btn,
 .draft__btn {
   padding: 10px 25px;
   width: 100px;
@@ -79,6 +80,15 @@ p {
   outline: none;
   cursor: pointer;
   font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+  .indexBtns {
+    width: 10rem;
+  }
 }
 
 .paid__status {
@@ -122,6 +132,10 @@ p {
   background: var(--primary-color);
 }
 
+.sidebar__header {
+  cursor: pointer;
+}
+
 .sidebar__bottom {
   background: var(--secondary-color) !important;
   border-top: 1px solid var(--primary-color);
@@ -144,9 +158,8 @@ p {
 }
 
 .invoice__item {
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: space-between;
   padding: 30px;
   background: var(--secondary-color);
   border-radius: 0.5rem;
@@ -154,6 +167,9 @@ p {
   transition: 1s;
   color: #fff;
   cursor: pointer;
+  align-content: space-between;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  justify-items: start;
 }
 
 .invoice__item:hover {
@@ -214,6 +230,11 @@ p {
   color: #fff;
 }
 
+.download__btn {
+  background: var(--paid-status-color);
+  color: #fff;
+}
+
 .invoice__details {
   background: var(--secondary-color);
   padding: 30px;
@@ -224,6 +245,12 @@ p {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.9rem;
+}
+
+.sender__details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .invoice__created-date {
@@ -281,6 +308,12 @@ p {
 }
 
 /* =========== add new page style start ======== */
+
+.disable {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 50%;
+}
 
 .new__invoice {
   width: 60%;
@@ -367,3 +400,52 @@ p {
   margin-top: 100px;
 }
 
+.new__invoice__btns div {
+  display: flex;
+}
+
+/* ============== modal style ============ */
+.delete__modal {
+  background: rgba(9, 10, 17, 0.76);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 330px;
+  padding: 30px;
+  background: var(--secondary-color);
+  z-index: 99999999;
+  border-radius: 5px;
+}
+
+.modal h3 {
+  margin-bottom: 15px;
+}
+
+.modal p {
+  font-size: 0.8rem;
+  line-height: 25px;
+}
+
+.modal__btns {
+  margin-top: 25px;
+}
+
+.modal__btns button:first-child {
+  background: #fff;
+  color: var(--secondary-color);
+}
+
+.showModal {
+  display: block;
+}
